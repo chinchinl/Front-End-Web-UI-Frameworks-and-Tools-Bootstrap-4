@@ -32,7 +32,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -90,8 +90,7 @@
                 </div>
 
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a type="button" class="btn btn-warning btn-block btn-sm" 
-                        data-toggle="modal" data-target="#reserveform">
+                    <a type="button" class="btn btn-warning btn-block btn-sm" id="reserveButton">
                         Reserve Table
                     </a>
                 </div>
@@ -345,6 +344,15 @@
                 
             });
         });
+        //var reserveForm = new bootstrap.Modal(document.getElementById('reserveform'))
+        $("#reserveButton").click(function(){
+            $("#reserveform").modal();
+        });
+        $("#loginButton").click(function(){
+            $("#loginModal").modal();
+        });
+        //data-toggle="modal" data-target="#loginModal"
+        
     </script>
 
 </body>
